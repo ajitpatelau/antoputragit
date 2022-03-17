@@ -9,21 +9,6 @@
         name: apache2
         update_cache: yes
         state: present
-    - name: install php modules
-      apt:
-        name:
-          - php 
-          - libapache2-mod-php 
-          - php-mysql 
-        state: present
-    - name: create info.php
-      copy:
-        dest: /var/www/html/info.php
-        content: |
-          <?php 
-          phpinfo(); 
-          ?>
-  
       systemd:
-       state: started
-       name: nginx
+        state: started
+        name: nginx
