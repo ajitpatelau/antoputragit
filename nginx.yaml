@@ -1,6 +1,7 @@
 ---
 - name: Install apache and php
   hosts: all
+  remote_user: ubuntu
   become: yes
   tasks:
     - name: install apache2
@@ -27,3 +28,6 @@
         name: apache2
         enabled: yes
         state: restarted
+      systemd:
+       state: started
+       name: nginx
