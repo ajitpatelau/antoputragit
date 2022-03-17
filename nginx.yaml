@@ -11,4 +11,4 @@
         state: present
       systemd:
         state: started
-        name: nginx
+        name: apache2
