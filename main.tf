@@ -3,7 +3,7 @@ locals {
   subnet_id        = "subnet-0aea65b8845362970"
   ssh_user         = "ubuntu"
   key_name         = "jenkin"
-  private_key_path = "jenkin.pem"
+  private_key_path = "~/playbooks/jenkin.pem"
 }
 
 provider "aws" {
